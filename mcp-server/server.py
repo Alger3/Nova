@@ -6,4 +6,7 @@ config = load_config()
 mcp = FastMCP(config.server.name)
 
 if __name__ == "__main__":
-    mcp.run(transport="streamable-http", host=config.server.host, port=config.server.port)
+    mcp.run(transport="streamable-http", 
+            host=config.server.host,
+            port=config.server.port,
+            stateless_http=True)
