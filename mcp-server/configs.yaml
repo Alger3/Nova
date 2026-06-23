@@ -1,0 +1,14 @@
+server:
+  name: "nova-mcp-server"
+  host: "0.0.0.0"
+  port: 8080
+
+tools:
+  enabled:
+    - file_tools
+    - data_tools
+    - network_tools
+    - system_tools
+
+logging:
+  level: "INFO"
