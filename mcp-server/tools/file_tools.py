@@ -1,7 +1,5 @@
-from fastmcp import FastMCP
 from pathlib import Path
-
-mcp = FastMCP("file-tools")
+from mcp_server import mcp
 
 
 @mcp.tool()

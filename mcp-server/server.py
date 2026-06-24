@@ -1,15 +1,11 @@
-from fastmcp import FastMCP
-from config import load_config
-from tools import file_mcp, data_mcp, network_mcp, system_mcp
+import importlib
+import pkgutil
+from mcp_server import mcp, config
+import tools
 
+for _, module_name, _ in pkgutil.iter_modules(tools.__path__):
+    importlib.import_module(f"tools.{module_name}")
 
-config = load_config()
-mcp = FastMCP(config.server.name)
-
-mcp.mount(file_mcp)
-mcp.mount(data_mcp)
-mcp.mount(network_mcp)
-mcp.mount(system_mcp)
 
 if __name__ == "__main__":
     mcp.run(transport="http", 

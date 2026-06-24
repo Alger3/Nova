@@ -1,8 +1,6 @@
 import os
 import platform
-from fastmcp import FastMCP
-
-mcp = FastMCP("system-tools")
+from mcp_server import mcp
 
 
 @mcp.tool()

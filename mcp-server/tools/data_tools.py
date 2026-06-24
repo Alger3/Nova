@@ -1,8 +1,6 @@
 import json
 import yaml
-from fastmcp import FastMCP
-
-mcp = FastMCP("data-tools")
+from mcp_server import mcp
 
 
 @mcp.tool()

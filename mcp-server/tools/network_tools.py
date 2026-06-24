@@ -1,7 +1,5 @@
 import httpx
-from fastmcp import FastMCP
-
-mcp = FastMCP("network-tools")
+from mcp_server import mcp
 
 
 @mcp.tool()
