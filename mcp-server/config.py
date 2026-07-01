@@ -10,7 +10,7 @@ class ServerConfig(BaseModel):
 
 
 class ToolsConfig(BaseModel):
-    enabled: list[str] = ["file_tools", "data_tools", "network_tools", "system_tools"]
+    enabled: list[str] = ["system_tools"]
 
 
 class LoggingConfig(BaseModel):

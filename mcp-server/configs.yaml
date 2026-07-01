@@ -5,9 +5,6 @@ server:
 
 tools:
   enabled:
-    - file_tools
-    - data_tools
-    - network_tools
     - system_tools
 
 logging:
